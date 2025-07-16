@@ -1,0 +1,49 @@
+* Binary Search is an efficient searching algorithm used to 
+  find the position of a target element in a sorted array.
+Input must be sorted
+Divides the search range in half with each step
+Time Complexity: O(log n)
+Space Complexity: O(1) (Iterative), O(log n) (Recursive due to stack)
+
+// find index of an element in an array
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       int[] arr = {1,2,3,4,5};
+       Arrays.sort(arr);
+      int left = 0;
+      int right=arr.length-1;
+      int div = arr[left] + arr[right];
+      int mid = div /2;
+      int target=3;
+      
+      while(arr[mid]!=target){
+          if(arr[mid]<target){
+              mid++;
+          }
+          else{
+              mid--;
+          }
+      }
+      System.out.print(target + " index" +mid);
+    }
+}
+
+// square root 
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+       int n=4;
+       int out=1;
+       while(out * out <=n){
+           out++;
+       }
+       int result = out-1;
+       System.out.print((int)result);
+    }
+}
+
+
+
