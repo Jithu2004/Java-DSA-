@@ -27,6 +27,23 @@ class Solution {
         
     }
 
+class Main {
+    public static void main(String[] args) {
+       int arr[] = {4,5,6,-1,5,-6,8,9};
+   int k=4;
+   int max =0;
+   for(int i=0;i<=arr.length-k;i++){
+       int curr=0;
+       for(int j=0;j<k;j++){
+           curr +=arr[i+j];  // index
+           
+       }
+       max= Math.max(curr,max);
+   }
+   System.out.println(max);
+    }
+}
+
 // Alternates in an Array
 class Solution {
    
