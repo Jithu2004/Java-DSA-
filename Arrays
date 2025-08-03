@@ -141,3 +141,22 @@ class Main {
     }
 }
 
+//Majority of elements
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+       int arr[] = {3, 3, 4, 2, 3, 3, 3};
+       int n=arr.length;
+       HashMap<Integer,Integer> map = new HashMap<>();
+       for(int num:arr){
+           map.put(num,map.getOrDefault(num,0) +1);
+       }
+       for(int key:map.keySet()){
+           if(map.get(key) > n/2){
+               System.out.println(key);
+              // return;
+           }
+       }
+       
+    }
+}
