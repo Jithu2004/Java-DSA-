@@ -1,0 +1,21 @@
+contains Duplicates:
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] n =  {1,2,3,52,3,2};
+        HashSet<Integer> seen = new HashSet<>();
+        HashSet<Integer> dup = new HashSet<>();
+        for(int num : n){
+            if(!seen.add(num)){
+                dup.add(num);
+            }
+        }
+        if(dup.isEmpty()){
+            System.out.println("no duplicates");
+        }
+        else{
+            System.out.println("contains duplicates");
+        }
+    }
+}
+    
