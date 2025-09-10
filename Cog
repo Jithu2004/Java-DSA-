@@ -18,4 +18,20 @@ class Main {
         }
     }
 }
+    import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int[] n =  {1,2,3,52,3,2};
+       HashMap<Integer,Integer> seen = new HashMap<>();
+       for(int num : n){
+           seen.put(num,seen.getOrDefault(num,0)+1);
+       }
+       for(int key:seen.keySet()){
+           int count =1;
+           if(seen.get(key) >count){
+               System.out.println(key +":"+seen.get(key));
+           }
+       }
+    }
+}
     
